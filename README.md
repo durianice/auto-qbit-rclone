@@ -1,6 +1,11 @@
 # auto-qbit-rclone
+## Download
 ```
-cd ~
+cd ~ && wget https://raw.githubusercontent.com/CCCOrz/auto-qbit-rclone/main/AutoQbitRclone.sh
+```
+## qBittorrent Download Options
+√ torrent 完成时运行外部程序
+```
 bash /root/AutoQbitRclone.sh --path="/media/movies/" "%N" "%F" "%R" "%D" "%C" "%Z" "%I"
 ```
 ## Params
