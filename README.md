@@ -2,6 +2,7 @@
 ## Download
 ```
 cd ~ && wget https://raw.githubusercontent.com/CCCOrz/auto-qbit-rclone/main/AutoQbitRclone.sh
+chmod a+x AutoQbitRclone.sh
 ```
 ## qBittorrent Download Options
 √ torrent 完成时运行外部程序
