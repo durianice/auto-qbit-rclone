@@ -1,4 +1,24 @@
 #!/bin/bash
+
+options=$(getopt -o '' --long path: -n '$0' -- "$@")
+eval set -- "$options"
+while true; do
+    case "$1" in
+        --path)
+            path="$2"
+            shift 2
+            ;;
+        --)
+            shift
+            break
+            ;;
+        *)
+            echo "Invalid option: $1"
+            exit 1
+            ;;
+    esac
+done
+
 torrent_name=$1
 content_dir=$2
 root_dir=$3
@@ -17,25 +37,6 @@ rclone_parallel="32"    # qbit上传线程，默认4
 auto_del_flag="rclone"    # 添加标签或者分类来标识已上传的种子 v4.0.4+版本添加标签“rclone”，低版本通过添加分类“rclone”标识
 # 改上面的那些参数即可
 
-options=$(getopt -o '' --long path: -n '$0' -- "$@")
-eval set -- "$options"
-while true; do
-    case "$1" in
-        --name)
-            path="$2"
-            shift 2
-            ;;
-        --)
-            shift
-            break
-            ;;
-        *)
-            echo "Invalid option: $1"
-            exit 1
-            ;;
-    esac
-done
- 
 if [ ! -d ${log_dir} ]
 then
         mkdir -p ${log_dir}
