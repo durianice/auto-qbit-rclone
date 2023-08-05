@@ -6,7 +6,7 @@ cd ~ && wget -q -O AutoQbitRclone.sh https://raw.githubusercontent.com/CCCOrz/au
 ## qBittorrent Download Options
 √ torrent 完成时运行外部程序
 ```
-bash /root/AutoQbitRclone.sh --path="/media/movies/" "%N" "%F" "%R" "%D" "%C" "%Z" "%I"
+bash /root/AutoQbitRclone.sh --path=/media/movies/ "%N" "%F" "%R" "%D" "%C" "%Z" "%I"
 ```
 ## Params
 - path : rcloneName:/$path/
